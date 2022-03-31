@@ -1,0 +1,57 @@
+:root{
+    --primary: #717171;
+    --secondary: #070707;
+}
+
+
+/*#logo{
+    width: 38vh;
+    height: 14vh;
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+}*/
+#Main h1{
+    text-align: center;
+    font-size: 5rem;
+    color:#BD36A8;
+    margin: auto;
+    top: 30vh;
+    left: 0;
+    right: 0;
+    position: absolute;
+    font-family: 'Gugi', cursive;
+
+
+}
+
+#Main img{
+    margin: auto;
+    top: 20vh;
+    left: 0;
+    right: 0;
+    position: absolute;
+    height: 12vh;
+}
+
+#Main button{
+    background-color:#AAAAAA ;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bolder;
+    font-size: 1.4rem;
+    display: block;
+    height: 7vh;
+    border-radius: 13px;
+
+}
+
+#btnGroup{
+    position: absolute;
+    top: 50vh;
+    margin: auto;
+
+    left: 0;
+    right: 0;
+}
