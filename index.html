@@ -4,29 +4,16 @@
     <meta charset="UTF-8">
     <title>upturn</title>
     <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Gugi&family=Quicksand&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <style>
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&family=Quicksand&display=swap" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/board.css" rel="stylesheet">
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-        #Main{
-            height: 100vh;
-            width: 100vw;
-            background: url("assets/img/background.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            margin: auto;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            position: absolute;
-        }
-    </style>
 </head>
 <body>
-<section id="Main">
-    <img src="assets/icon/wings.png" alt="">
-        <h1>Upturn</h1>
+<section id="Main" style="display:none;">
+    <img alt="" src="assets/icon/wings.png">
+    <h1>Upturn</h1>
 
     <div class="d-grid gap-3 col-2 mx-auto " id="btnGroup">
         <button class="btn " type="button">Play</button>
@@ -34,7 +21,75 @@
     </div>
 
 </section>
+
+<section class="container-fluid" id="board">
+
+    <section class="row">
+        <section class="col-4" style="position: relative">
+
+            <section id="logoSec">
+                <img alt="" src="assets/icon/wings.png">
+                <h1>Upturn</h1>
+            </section>
+
+
+            <section id="score">
+                <h2>Score</h2>
+                <h3>11</h3>
+            </section>
+
+            <section id="hearts">
+                <img alt="img" src="assets/icon/heart.png">
+                <img alt="img" src="assets/icon/heart.png">
+                <img alt="img" src="assets/icon/heart.png">
+            </section>
+
+
+        </section>
+
+        <section class="col" id="panel">
+            <section id="cardPanel">
+                <section class="cardRow">
+                    <div class="cards" id="1"><img alt="" src="" class="icon"><img alt="" src="assets/icon/wings.png"></div>
+                    <div class="cards" id="2"><img alt="" src="" class="icon"><img alt="" src="assets/icon/wings.png"></div>
+                    <div class="cards" id="3"><img alt="" src="" class="icon"><img alt="" src="assets/icon/wings.png"></div>
+                    <div class="cards" id="4"><img alt="" src="" class="icon"><img alt="" src="assets/icon/wings.png"></div>
+
+                </section>
+                <section class="cardRow">
+                    <div class="cards" id="5"><img alt="" src="" class="icon"><img alt="" src="assets/icon/wings.png"></div>
+                    <div class="cards" id="6"><img alt="" src="" class="icon"><img alt="" src="assets/icon/wings.png"></div>
+                    <div class="cards" id="7"><img alt="" src="" class="icon"><img alt="" src="assets/icon/wings.png"></div>
+                    <div class="cards" id="8"><img alt="" src="" class="icon"><img alt="" src="assets/icon/wings.png"></div>
+                </section>
+
+                <section class="cardRow">
+                    <div class="cards" id="9"><img alt="" src="" class="icon"><img alt="" src="assets/icon/wings.png"></div>
+                    <div class="cards" id="10"><img alt="" src="" class="icon"><img alt="" src="assets/icon/wings.png"></div>
+                    <div class="cards" id="11"><img alt="" src="" class="icon"><img alt="" src="assets/icon/wings.png"></div>
+                    <div class="cards" id="12"><img alt="" src="" class="icon"><img alt="" src="assets/icon/wings.png"></div>
+
+                </section>
+
+                <section class="cardRow">
+                    <div class="cards" id="13"><img alt="" src="" class="icon"><img alt="" src="assets/icon/wings.png"></div>
+                    <div class="cards" id="14"><img alt="" src="" class="icon"><img alt="" src="assets/icon/wings.png"></div>
+                    <div class="cards" id="15"><img alt="" src="" class="icon"><img alt="" src="assets/icon/wings.png"></div>
+                    <div class="cards" id="16"><img alt="" src="" class="icon"><img alt="" src="assets/icon/wings.png"></div>
+                </section>
+
+
+
+            </section>
+        </section>
+    </section>
+
+
+</section>
 <script src="assets/JQuery/jquery-3.6.0.min.js"></script>
+<script src="assets/js/db.js"></script>
+<script src="assets/js/board.js"></script>
+
 
 </body>
 </html>

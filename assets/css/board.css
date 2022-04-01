@@ -1,0 +1,127 @@
+#board{
+    height: 100vh;
+    width: 100vw;
+    background: url("assets/img/wallFlip.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+#logoSec>img{
+    width: 10vw;
+    position: relative;
+    top: 3vh;
+    left: 20%;
+
+}
+
+#logoSec>h1{
+    text-align: center;
+    font-size: 5rem;
+    color:#BD36A8;
+    font-family: 'Gugi', cursive;
+}
+
+#logoSec{
+    width: max-content;
+    margin: auto;
+    top: 0vh;
+    right: 1vw;
+    position: absolute;
+}
+
+#score{
+    width: 20vw;
+    height: 15vw;
+    background-color: #E372D8;
+    position: absolute;
+    top: 40vh;
+    right: 0;
+    margin: auto;
+    border-radius: 25px;
+    color: white;
+    font-family: 'Gugi', cursive;
+
+}
+
+
+#score>h2,#score>h3{
+    font-size: 2.5rem;
+    position: absolute;
+    top: 1vh;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: max-content;
+    height: max-content;
+}
+
+#score>h3{
+    top: 40%;
+    font-size: 5rem;
+}
+
+#hearts>img{
+    width: 5vw;
+}
+
+#hearts{
+    display: flex;
+    justify-content: center;
+    top: 80vh;
+    right: 2.5vw;
+    position: absolute;
+}
+
+#panel{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#cardPanel{
+    display: flex;
+    flex-direction: column;
+    height: 86vh;
+    /* width: 100vh; */
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardRow {
+    display: flex;
+    width: 86vh;
+    justify-content: space-between;
+}
+
+.cards{
+    width: 20vh;
+    height: 20vh;
+    background-color: #BD36A8;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 7px 5px 4px 0px #c64cb3;
+    border: #a6a49f 4px solid;
+}
+
+.cards>img{
+    width: 6vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.icon{
+    display: none;
+}
+

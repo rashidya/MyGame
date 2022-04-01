@@ -1,17 +1,17 @@
-:root{
-    --primary: #717171;
-    --secondary: #070707;
+
+#Main{
+    height: 100vh;
+    width: 100vw;
+    background: url("assets/img/wall.jpg") no-repeat;
+    background-size: cover;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+
 }
-
-
-/*#logo{
-    width: 38vh;
-    height: 14vh;
-    display: flex;
-    background-color: black;
-    justify-content: center;
-    align-items: center;
-}*/
 #Main h1{
     text-align: center;
     font-size: 5rem;
