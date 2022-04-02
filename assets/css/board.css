@@ -125,3 +125,25 @@
     display: none;
 }
 
+#result{
+    position: relative;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+#result>img{
+
+    width: 40vh;
+
+}
+
+
+#result>h1{
+    text-align: center;
+    font-family: 'Gugi';
+    font-size: 5rem;
+
+
+}

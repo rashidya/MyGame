@@ -11,18 +11,18 @@
 
 </head>
 <body>
-<section id="Main" style="display:none;">
+<section id="Main" >
     <img alt="" src="assets/icon/wings.png">
     <h1>Upturn</h1>
 
     <div class="d-grid gap-3 col-2 mx-auto " id="btnGroup">
-        <button class="btn " type="button">Play</button>
+        <button class="btn " type="button" id="play">Play</button>
         <button class="btn " type="button">Settings</button>
     </div>
 
 </section>
 
-<section class="container-fluid" id="board">
+<section class="container-fluid" id="board" style="display:none;">
 
     <section class="row">
         <section class="col-4" style="position: relative">
@@ -48,7 +48,7 @@
         </section>
 
         <section class="col" id="panel">
-            <section id="cardPanel">
+            <section  id="cardPanel">
                 <section class="cardRow">
                     <div class="cards" id="1"><img alt="" src="" class="icon"><img alt="" src="assets/icon/wings.png"></div>
                     <div class="cards" id="2"><img alt="" src="" class="icon"><img alt="" src="assets/icon/wings.png"></div>
@@ -81,13 +81,21 @@
 
 
             </section>
+
+            <section id="result" style="display: none">
+                <h1>Yeah! You Won</h1>
+                <img src="assets/img/angel.png" alt="">
+
+            </section>
         </section>
     </section>
 
 
 </section>
+
 <script src="assets/JQuery/jquery-3.6.0.min.js"></script>
 <script src="assets/js/db.js"></script>
+<script src="assets/js/main.js"></script>
 <script src="assets/js/board.js"></script>
 
 

@@ -1,9 +1,12 @@
 var selectedCard=null;
+var secondSelectedCard=null;
+var firstSelectedCard=null;
 var selectedImage;
 var selectedIcon;
+var count=0;
 setImages();
 $(".cards").click(function (){
-    $(selectedCard).off('mouseout');
+
     if(selectedCard==null || this!=selectedCard){
         $(this).css('transform','rotateY(180deg)');
         $(this).css('transition','all 1s');
@@ -13,34 +16,46 @@ $(".cards").click(function (){
         if(this!=selectedCard && selectedCard!=null){
 
             if( $(this).children('img:nth-child(1)').attr('src')== $(selectedIcon).attr('src')){
-                console.log(2)
                 $(this).css('visibility','hidden');
                 $(selectedCard).css('visibility','hidden');
-            }else {
-                console.log(3)
-                console.log($(selectedIcon).attr('src'))
-                console.log($(this).children('img:nth-child(1)').attr('src'));
-
-                   /* $(this).css('transform','rotateY(0deg)');
-                    $(this).css('transition','all 1s');
-                    $(this).css('transition-delay','all 1s');
-                    $(this.firstChild).css('display','none');
-                    $(this).children('img:nth-child(2)').css('display', 'block');
-                    $(selectedCard).css('transform','rotateY(0deg)');
-                    $(selectedCard).css('transition','all 2s');
-                    $(selectedCard).css('transition-delay','all 2s');
-                    $(selectedCard).children('img:nth-child(1)').css('display','none');
-                    $(selectedCard).children('img:nth-child(2)').css('display','block');*/
-
-
+                count=count+2;
+                secondSelectedCard=null;
+                firstSelectedCard=null;
+                selectedCard=null;
+                if (count===16){
+                    console.log('You won')
+                    $("#result").css('display','flex');
+                    $("#cardPanel").css('display','none');
+                }
+                return;
             }
 
+            secondSelectedCard=this;
+            firstSelectedCard=selectedCard;
+            $(secondSelectedCard).mousemove(function (){
+
+                $(firstSelectedCard).css('transform','rotateY(0deg)');
+                $(firstSelectedCard).css('transition','all 2s');
+                $(firstSelectedCard).css('transition-delay','all 2s');
+                $(firstSelectedCard).children('img:nth-child(1)').css('display', 'none');
+                $(firstSelectedCard).children('img:nth-child(2)').css('display', 'block');
+                $(selectedCard).css('transform','rotateY(0deg)');
+                $(selectedCard).css('transition','all 2s');
+                $(selectedCard).css('transition-delay','all 2s');
+                $(selectedCard).children('img:nth-child(1)').css('display','none');
+                $(selectedCard).children('img:nth-child(2)').css('display','block');
+                $(secondSelectedCard).off('mousemove');
+                secondSelectedCard=null;
+                firstSelectedCard=null;
+                selectedCard=null;
+               });
 
         }
 
         selectedCard =this;
         selectedImage =$(this).children('img:nth-child(2)');
         selectedIcon =$(this).children('img:nth-child(1)');
+
     }else{
         console.log(1)
         $(this).css('transform','rotateY(0deg)');
@@ -50,24 +65,9 @@ $(".cards").click(function (){
         selectedCard=null;
     }
 
-
-
-/*    if(this.firstChild.attr('src')==selectedImage.attr('src')){
-        $(selectedCard).css('display','none)');
-
-        $(this).css('display','none');
-
-    }else{
-        $(selectedCard).css('transform','rotateY(0deg)');
-        $(selectedImage).attr('src','assets/icon/wings.png');
-        $(this).css('transform','rotateY(0deg)');
-        $(this.firstChild).attr('src','assets/icon/wings.png');
-    }
-    */
-
-
-
 });
+
+
 
 function setImages(){
     var numbers =[];
