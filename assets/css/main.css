@@ -26,13 +26,19 @@
 
 }
 
-#Main img{
+#wings{
     margin: auto;
     top: 20vh;
     left: 0;
     right: 0;
     position: absolute;
     height: 12vh;
+}
+
+#fairy{
+    position: absolute;
+    left: 19vw;
+    height: 57vh;
 }
 
 #Main button{

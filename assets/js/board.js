@@ -6,6 +6,9 @@ var selectedIcon;
 var count=0;
 setImages();
 $(".cards").click(function (){
+    var click = document.createElement('audio');
+    click.setAttribute('src','assets/audio/click.wav');
+    click.play();
 
     if(selectedCard==null || this!=selectedCard){
         $(this).css('transform','rotateY(180deg)');
@@ -16,8 +19,13 @@ $(".cards").click(function (){
         if(this!=selectedCard && selectedCard!=null){
 
             if( $(this).children('img:nth-child(1)').attr('src')== $(selectedIcon).attr('src')){
+
+
                 $(this).css('visibility','hidden');
                 $(selectedCard).css('visibility','hidden');
+                var positive = document.createElement('audio');
+                positive.setAttribute('src','assets/audio/positive.wav');
+                positive.play();
                 count=count+2;
                 secondSelectedCard=null;
                 firstSelectedCard=null;
@@ -44,11 +52,14 @@ $(".cards").click(function (){
                 $(selectedCard).css('transition-delay','all 2s');
                 $(selectedCard).children('img:nth-child(1)').css('display','none');
                 $(selectedCard).children('img:nth-child(2)').css('display','block');
+                var negative = document.createElement('audio');
+                negative.setAttribute('src','assets/audio/negative.wav');
+                negative.play();
                 $(secondSelectedCard).off('mousemove');
                 secondSelectedCard=null;
                 firstSelectedCard=null;
                 selectedCard=null;
-               });
+            });
 
         }
 
