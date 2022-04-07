@@ -5,9 +5,20 @@ var selectedImage;
 var selectedIcon;
 var count=0;
 setImages();
+var timer;
+
+var firstClick=true;
+
 $(".cards").click(function (){
+
+    if(firstClick) {
+        timer = setInterval(time, 1000);
+        firstClick=false;
+    }
+
     var click = document.createElement('audio');
     click.setAttribute('src','assets/audio/click.wav');
+    click.volume=0.3;
     click.play();
 
     if(selectedCard==null || this!=selectedCard){
@@ -23,8 +34,18 @@ $(".cards").click(function (){
 
                 $(this).css('visibility','hidden');
                 $(selectedCard).css('visibility','hidden');
+
+
+             /*   $(this).css('transform','rotateY(0deg)');
+                $(this).children('img').css('transition',' visibility 0.5s');
+                $(this).css('opacity','52%');
+                $(selectedCard).css('opacity','52%');
+                $(selectedCard).children('img').css('visibility','hidden');
+                $(selectedCard).children('img').css('transition',' all 0.5s');*/
+
                 var positive = document.createElement('audio');
                 positive.setAttribute('src','assets/audio/positive.wav');
+                positive.volume=0.3;
                 positive.play();
                 count=count+2;
                 secondSelectedCard=null;
@@ -34,13 +55,14 @@ $(".cards").click(function (){
                     console.log('You won')
                     $("#result").css('display','flex');
                     $("#cardPanel").css('display','none');
+                    clearInterval(timer);
                 }
                 return;
             }
 
             secondSelectedCard=this;
             firstSelectedCard=selectedCard;
-            $(secondSelectedCard).mousemove(function (){
+            $(document).mousemove(function (){
 
                 $(firstSelectedCard).css('transform','rotateY(0deg)');
                 $(firstSelectedCard).css('transition','all 2s');
@@ -54,12 +76,16 @@ $(".cards").click(function (){
                 $(selectedCard).children('img:nth-child(2)').css('display','block');
                 var negative = document.createElement('audio');
                 negative.setAttribute('src','assets/audio/negative.wav');
+                negative.volume=0.3;
                 negative.play();
                 $(secondSelectedCard).off('mousemove');
                 secondSelectedCard=null;
                 firstSelectedCard=null;
                 selectedCard=null;
+                $(document).off('mousemove');
             });
+
+
 
         }
 
@@ -68,7 +94,7 @@ $(".cards").click(function (){
         selectedIcon =$(this).children('img:nth-child(1)');
 
     }else{
-        console.log(1)
+
         $(this).css('transform','rotateY(0deg)');
         $(this).css('transition','all 1s');
         $(this.firstChild).css('display','none');
@@ -98,6 +124,40 @@ function setImages(){
           }
 
             loop=true;
+        }
+    }
+
+}
+
+function time(){
+    var height=$("#timer>div").css('height');
+
+    height = parseInt(height)-4;
+
+    $("#timer>div").css('height',height);
+
+    if (height<=250){
+        $("#timer>div").css('background-color','#ff7836');
+        $("#timer>div").css('transition','background-color 1.5s');
+        if (height<=100){
+            $("#timer>div").css('background-color','#f62929');
+            $("#timer>div").css('transition','background-color 1.5s');
+        }
+
+
+    }
+
+    if (height<=0){
+        clearInterval(timer);
+
+        var cards=$(".cards");
+
+        for (let i = 0; i < cards.length; i++) {
+            var card=cards[i];
+            if ($(card).css('visibility') =='visible'){
+                alert('Game Over');
+                break;
+            }
         }
     }
 

@@ -12,25 +12,26 @@
     position: absolute;
 }
 #logoSec>img{
-    width: 10vw;
+    width: 7vw;
     position: relative;
     top: 3vh;
     left: 20%;
-
 }
 
 #logoSec>h1{
     text-align: center;
-    font-size: 5rem;
-    color:#BD36A8;
+    font-size: 3rem;
+    color: #BD36A8;
     font-family: 'Gugi', cursive;
+    margin: 0;
 }
 
 #logoSec{
     width: max-content;
     margin: auto;
-    top: 0vh;
-    right: 1vw;
+    top: 0;
+    right: 0;
+    left: 0;
     position: absolute;
 }
 
@@ -45,6 +46,7 @@
     border-radius: 25px;
     color: white;
     font-family: 'Gugi', cursive;
+    display: none;
 
 }
 
@@ -65,24 +67,27 @@
     font-size: 5rem;
 }
 
-#hearts>img{
-    width: 5vw;
+#stars>img{
+    width: 4vw;
+    padding: 4px;
 }
 
-#hearts{
+#stars{
     display: flex;
     justify-content: center;
-    top: 80vh;
-    right: 2.5vw;
+    top: 83vh;
+    right: 0;
     position: absolute;
+    left: 0;
 }
 
 #panel{
 
     display: flex;
     align-items: center;
-    justify-content: center;
     height: 100vh;
+    justify-content: start;
+    margin-left: 4vw;
 }
 
 #cardPanel{
@@ -131,6 +136,9 @@
     flex-direction: column;
     display: flex;
     align-items: center;
+    height: 80vh;
+    background-color: #efdcec;
+    border-radius: 47px;
 }
 
 #result>img{
@@ -157,4 +165,36 @@
     justify-content: center;
     align-items: center;
     box-shadow: 13px 10px 5px 0px #9c9a9a;*/
+}
+
+#timer{
+    background-color: #e2e2e2;
+    height: 55.5vh;
+    width: 3.5vw;
+    border-radius: 61px;
+    position: absolute;
+    border: 8px #cac3c3 solid;
+    top: 27vh;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+#timer>div{/*
+    background-color: #4fd2f4;*/
+    background-color: #dd58fa;
+    width: 38px;
+    height: 53.2vh;
+    border-radius: 61px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+#fairyBoard{
+    height: 92vh;
+    padding-left: 6vw;
+
 }
