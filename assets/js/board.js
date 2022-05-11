@@ -132,7 +132,7 @@ function setImages(){
 function time(){
     var height=$("#timer>div").css('height');
 
-    height = parseInt(height)-4;
+    height = parseInt(height)-2;
 
     $("#timer>div").css('height',height);
 
