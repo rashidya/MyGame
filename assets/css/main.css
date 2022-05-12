@@ -15,10 +15,10 @@
 }
 #Main h1{
     text-align: center;
-    font-size: 5rem;
-    color:#BD36A8;
+    font-size: 6rem;
+    color: #BD36A8;
     margin: auto;
-    top: 40vh;
+    top: 45vh;
     left: 0;
     right: 0;
     position: absolute;
@@ -33,17 +33,17 @@
     left: 0;
     right: 0;
     position: absolute;
-    height: 12vh;
+    height: 16vh;
 }
 
 #fairy{
     position: absolute;
-    left: 19vw;
+    left: 10vw;
     height: 57vh;
 }
 #fairyR{
     position: absolute;
-    Right: 19vw;
+    Right: 10vw;
     height: 57vh;
 }
 
@@ -59,7 +59,7 @@
     border: 7px solid #ADAAAA;
     width: 12vw;
     position: absolute;
-    top: 60vh;
+    top: 65vh;
     margin: auto;
     left: 0;
     right: 0;

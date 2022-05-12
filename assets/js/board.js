@@ -4,8 +4,11 @@ var firstSelectedCard=null;
 var selectedImage;
 var selectedIcon;
 var count=0;
-setImages();
+var no_of_cards;
+
 var timer;
+
+var countdown;
 
 var firstClick=true;
 var music = document.createElement('audio');
@@ -13,7 +16,9 @@ music.setAttribute('src','assets/audio/backgroundMusic.mp3');
 
 var select = document.createElement('audio');
 select.setAttribute('src','assets/audio/select.wav');
+
 $(".cards").click(function (){
+
 
     if(firstClick) {
         timer = setInterval(time, 1000);
@@ -55,7 +60,7 @@ $(".cards").click(function (){
                 secondSelectedCard=null;
                 firstSelectedCard=null;
                 selectedCard=null;
-                if (count===16){
+                if (count===no_of_cards){
                     console.log('You won')
                     $("#result").css('display','flex');
                     $("#cardPanel").css('display','none');
@@ -110,24 +115,80 @@ $(".cards").click(function (){
 
 
 
-function setImages(){
+function setImages(level){
+
     var numbers =[];
     var loop=true;
-    var divSet=$(".icon");
+    var divSet;
 
-    for (let i = 0; i <iconList.length; i++) {
-        for (let j = 0; j < 2; j++) {
-          while (loop){
-                var id=Math.floor(Math.random()*16);
-
-                if (!numbers.includes(id)){
-                    $(divSet[id]).attr('src',iconList[i]);
-                    numbers.push(id);
-                    loop=false;
+    if (level==1){
+        countdown=3;
+        no_of_cards=16;
+        divSet=$(".icon1");
+        for (let i = 0; i <iconList.length; i++) {
+            for (let j = 0; j < 2; j++) {
+                while (loop){
+                    var id=Math.floor(Math.random()* 16);
+                    if (!numbers.includes(id)){
+                        $(divSet[id]).attr('src',iconList[i]);
+                        numbers.push(id);
+                        console.log(numbers)
+                        loop=false;
+                    }
                 }
-          }
 
-            loop=true;
+                loop=true;
+            }
+        }
+    }
+
+    if (level==2){
+        countdown=2;
+        no_of_cards=36;
+        divSet=$(".icon2");
+        iconList.push('assets/img/star.png');
+        for (let k = 0; k < 2; k++) {
+            for (let i = 0; i <iconList.length; i++) {
+                for (let j = 0; j < 2; j++) {
+                    while (loop){
+                        var id=Math.floor(Math.random()*36);
+                        if (!numbers.includes(id)){
+                            $(divSet[id]).attr('src',iconList[i]);
+                            numbers.push(id);
+                            console.log(numbers)
+                            loop=false;
+                        }
+                    }
+
+                    loop=true;
+                }
+            }
+
+        }
+        iconList.pop();
+    }
+
+    if (level==3){
+        divSet=$(".icon3");
+        countdown=1;
+        no_of_cards=64;
+        for (let k = 0; k < 4; k++) {
+            for (let i = 0; i <iconList.length; i++) {
+                for (let j = 0; j < 2; j++) {
+                    while (loop){
+                        var id=Math.floor(Math.random()* 64);
+                        if (!numbers.includes(id)){
+                            $(divSet[id]).attr('src',iconList[i]);
+                            numbers.push(id);
+                            console.log(numbers)
+                            loop=false;
+                        }
+                    }
+
+                    loop=true;
+                }
+            }
+
         }
     }
 
@@ -136,7 +197,7 @@ function setImages(){
 function time(){
     var height=$("#timer>div").css('height');
 
-    height = parseInt(height)-2;
+    height = parseInt(height)- countdown;
 
     $("#timer>div").css('height',height);
 

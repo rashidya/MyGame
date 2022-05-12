@@ -16,8 +16,9 @@ $("#play").click(function (){
     select.volume=0.2;
 
 
+
     $("#Main").css('display','none');
-    $("#board").css('display','block');
+    $("#Map").css('display','block');
 
    setTimeout(playMusic,1000)
 
@@ -27,3 +28,4 @@ $("#play").click(function (){
 function playMusic(){
     music.play();
 }
+
