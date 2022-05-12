@@ -13,6 +13,8 @@ $("#play").click(function (){
     music.pause();
     music.volume=0.1;
     select.play();
+    select.volume=0.2;
+
 
     $("#Main").css('display','none');
     $("#board").css('display','block');
@@ -21,11 +23,6 @@ $("#play").click(function (){
 
 });
 
-$(window).on('load',function (){
-    music.volume=0.3;
-    music.play();
-  /*  loading.play();*/
-});
 
 function playMusic(){
     music.play();

@@ -10,6 +10,7 @@
     right: 0;
     bottom: 0;
     position: absolute;
+    overflow: hidden;
 
 }
 #Main h1{
@@ -17,7 +18,7 @@
     font-size: 5rem;
     color:#BD36A8;
     margin: auto;
-    top: 30vh;
+    top: 40vh;
     left: 0;
     right: 0;
     position: absolute;
@@ -28,7 +29,7 @@
 
 #wings{
     margin: auto;
-    top: 20vh;
+    top: 30vh;
     left: 0;
     right: 0;
     position: absolute;
@@ -40,24 +41,35 @@
     left: 19vw;
     height: 57vh;
 }
+#fairyR{
+    position: absolute;
+    Right: 19vw;
+    height: 57vh;
+}
 
 #Main button{
-    background-color:#AAAAAA ;
+    background-color: #D3D3D3;
     color: white;
     font-family: 'Quicksand', sans-serif;
     font-weight: bolder;
-    font-size: 1.4rem;
+    font-size: 2rem;
     display: block;
-    height: 7vh;
-    border-radius: 13px;
+    height: 11vh;
+    border-radius: 39px;
+    border: 7px solid #ADAAAA;
+    width: 12vw;
+    position: absolute;
+    top: 60vh;
+    margin: auto;
+    left: 0;
+    right: 0;
 
 }
 
-#btnGroup{
-    position: absolute;
-    top: 50vh;
-    margin: auto;
 
-    left: 0;
-    right: 0;
+#house{
+    position: absolute;
+    bottom: -190px;
+    right: -200px;
+    width: 860px;
 }

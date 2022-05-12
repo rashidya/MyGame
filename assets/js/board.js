@@ -8,7 +8,11 @@ setImages();
 var timer;
 
 var firstClick=true;
+var music = document.createElement('audio');
+music.setAttribute('src','assets/audio/backgroundMusic.mp3');
 
+var select = document.createElement('audio');
+select.setAttribute('src','assets/audio/select.wav');
 $(".cards").click(function (){
 
     if(firstClick) {
@@ -162,3 +166,16 @@ function time(){
     }
 
 }
+
+$("#home").click(function (){
+    music.play();
+    music.volume=0.3;
+    select.play();
+    select.volume=0.2;
+
+    $("#Main").css('display','block');
+    $("#board").css('display','none');
+
+    setTimeout(playMusic,1000)
+
+});
