@@ -1,3 +1,13 @@
+var music = document.createElement('audio');
+music.setAttribute('src','assets/audio/backgroundMusic.mp3');
+
+var select = document.createElement('audio');
+select.setAttribute('src','assets/audio/select.wav');
+
+var victory = document.createElement('audio');
+victory.setAttribute('src','assets/audio/victory.wav');
+
+
 var selectedCard=null;
 var secondSelectedCard=null;
 var firstSelectedCard=null;
@@ -11,11 +21,7 @@ var timer;
 var countdown;
 
 var firstClick=true;
-var music = document.createElement('audio');
-music.setAttribute('src','assets/audio/backgroundMusic.mp3');
 
-var select = document.createElement('audio');
-select.setAttribute('src','assets/audio/select.wav');
 
 $(".cards").click(function (){
 
@@ -61,9 +67,12 @@ $(".cards").click(function (){
                 firstSelectedCard=null;
                 selectedCard=null;
                 if (count===no_of_cards){
-                    console.log('You won')
-                    $("#result").css('display','flex');
-                    $("#cardPanel").css('display','none');
+                    music.pause();
+                    victory.play();
+                    victory.volume=0.3;
+                    $("#result").css('display','block');
+                    $("#panel").css('display','none');
+                    $("#timerSection").css('display','none');
                     clearInterval(timer);
                 }
                 return;
@@ -229,6 +238,20 @@ function time(){
 }
 
 $("#home").click(function (){
+    music.play();
+    music.volume=0.3;
+    select.play();
+    select.volume=0.2;
+
+    $("#Main").css('display','block');
+    $("#Map").css('display','none');
+    $("#board").css('display','none');
+
+    setTimeout(playMusic,1000)
+
+});
+
+$("#replay").click(function (){
     music.play();
     music.volume=0.3;
     select.play();

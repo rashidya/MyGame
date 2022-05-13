@@ -117,30 +117,17 @@
 }
 
 #result{
-    position: relative;
+    position: absolute;
     width: 100%;
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    height: 80vh;
-    background-color: #efdcec;
-    border-radius: 47px;
-}
-
-#result>img{
-
-    width: 40vh;
-
+    border-radius: 45px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 
-#result>h1{
-    text-align: center;
-    font-family: 'Gugi';
-    font-size: 5rem;
-
-
-}
 
 #panelBackground {
  /*   background-color: #fcd8fc;
@@ -185,10 +172,10 @@
 
 }
 
-#home{
+#home,#replay{
     background-color: #D3D3D3;
     color: white;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Akshar', sans-serif;
     font-weight: bolder;
     font-size: 1.5rem;
     display: block;
@@ -202,3 +189,25 @@
     left: 0;
     right: 0;
 }
+
+#replay{
+    top: 76vh;
+    z-index: 2;
+}
+
+
+#Victory{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 80vh;
+    border-radius: 45px;
+
+    z-index: 1;
+}
+
+
+

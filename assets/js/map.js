@@ -1,5 +1,12 @@
+var music = document.createElement('audio');
+music.setAttribute('src','assets/audio/backgroundMusic.mp3');
+
+
+var select = document.createElement('audio');
+select.setAttribute('src','assets/audio/select.wav');
+
 $("#level_1").click(function (){
-    music.pause();
+    music.play();
     music.volume=0.1;
     select.play();
     select.volume=0.2;
@@ -20,7 +27,7 @@ $("#level_1").click(function (){
 });
 
 $("#level_2").click(function (){
-    music.pause();
+    music.play();
     music.volume=0.1;
     select.play();
     select.volume=0.2;
@@ -40,7 +47,7 @@ $("#level_2").click(function (){
 });
 
 $("#level_3").click(function (){
-    music.pause();
+    music.play();
     music.volume=0.1;
     select.play();
     select.volume=0.2;
@@ -52,6 +59,20 @@ $("#level_3").click(function (){
     $(".cards").css('width','9vh');
     $(".cards").css('height','9vh');
     $(".cards>img").css('width','3vw');
+
+    setTimeout(playMusic,1000)
+
+});
+
+$("#homeMap").click(function (){
+    music.play();
+    music.volume=0.3;
+    select.play();
+    select.volume=0.2;
+
+    $("#Main").css('display','block');
+    $("#Map").css('display','none');
+    $("#board").css('display','none');
 
     setTimeout(playMusic,1000)
 

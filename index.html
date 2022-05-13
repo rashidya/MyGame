@@ -5,6 +5,7 @@
     <title>upturn</title>
     <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Gugi&family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Akshar&family=Fredoka+One&family=Glory:ital,wght@1,800&family=Roboto:wght@100;500&display=swap" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
     <link href="assets/css/board.css" rel="stylesheet">
     <link href="assets/css/map.css" rel="stylesheet">
@@ -25,7 +26,7 @@
 </section>
 
 <section id="Map" style="display:none;" >
-
+    <button class="btn " type="button" id="homeMap">Home</button>
     <section>
         <section >
             <img src="assets/img/house.gif" alt="fairy_House" id="level_1" type="button">
@@ -48,7 +49,7 @@
 <section class="container-fluid" id="board" style="display:none;">
 
     <section class="row">
-        <section class="col-3" style="position: relative">
+        <section class="col-3" style="position: relative" id="timerSection" >
             <div id="timer">
                 <div></div>
             </div>
@@ -61,18 +62,12 @@
             </section>
 
 
-            <section id="score">
-                <h2>Score</h2>
-                <h3>11</h3>
-            </section>
-
-
 
         </section>
 
 
         <section class="col" id="panel">
-            <section id="panelBackground">
+            <section id="panelBackground" >
                 <section  id="cardPanel">
                     <section class="cardRow RL-1 RL-2 RL-3">
                         <div class="cards L1 L2 L3" id="1"><img alt="" src="" class="icon1 icon2 icon3 icon"><img alt="" src="assets/icon/wings.png"></div>
@@ -172,12 +167,13 @@
 
             </section>
 
-            <section id="result" style="display: none">
-                <h1>Yeah! You Won</h1>
+            <img src="assets/img/fairy.png" alt="fairy" id="fairyBoard" >
 
-            </section>
+        </section>
 
-            <img src="assets/img/fairy.png" alt="fairy" id="fairyBoard">
+        <section id="result" style="display: none">
+            <button class="btn " type="button" id="replay">Replay</button>
+            <img src="assets/gif/victory.gif" alt="" id="Victory">
 
         </section>
 

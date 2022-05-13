@@ -18,6 +18,9 @@
     width: 25vw;
     text-align: center;
     cursor: hand;
+    color: #c9c9c9;
+    font-family: 'Akshar', sans-serif;
+    font-weight: bolder;
 }
 
 #Map > section >section {
@@ -33,4 +36,22 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+#homeMap{
+    background-color: #D3D3D3;
+    color: white;
+    font-family: 'Akshar', sans-serif;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    display: block;
+    height: 9vh;
+    border-radius: 39px;
+    border: 5px solid #ADAAAA;
+    width: 8vw;
+    position: absolute;
+    top: 5vh;
+    margin: auto;
+    left: 5vw;
+
 }
