@@ -10,8 +10,8 @@ $("#level_1").click(function (){
     $("#board").css('display','block');
     $(".L2,.L3").css('display','none');
     $(".L1").css('display','block');
-    $(".cards").css('width','20vh');
-    $(".cards").css('height','20vh');
+    $(".cards").css('width','19vh');
+    $(".cards").css('height','19vh');
     $(".cards>img").css('width','6vw');
 
 

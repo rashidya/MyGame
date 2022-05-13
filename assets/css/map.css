@@ -1,0 +1,36 @@
+#Map {
+    height: 100vh;
+    width: 100vw;
+    background: url("assets/img/wallFlip.jpg") no-repeat;
+    background-size: cover;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    display: flex;
+
+}
+
+
+#Map img, #Map h1 {
+    width: 25vw;
+    text-align: center;
+    cursor: hand;
+}
+
+#Map > section >section {
+    display: flex;
+    width: 100vw;
+    justify-content: space-evenly;
+}
+
+#Map>section{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

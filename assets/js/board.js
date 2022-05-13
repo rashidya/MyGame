@@ -235,8 +235,11 @@ $("#home").click(function (){
     select.volume=0.2;
 
     $("#Main").css('display','block');
+    $("#Map").css('display','none');
     $("#board").css('display','none');
 
     setTimeout(playMusic,1000)
 
 });
+
+$(".cards").attr('type','button');

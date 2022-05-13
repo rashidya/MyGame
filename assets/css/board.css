@@ -13,27 +13,13 @@
 }
 #logoSec>img{
     width: 7vw;
-    position: relative;
+    position: absolute;
     top: 18vh;
     left: 0;
-}
-
-#logoSec>h1{
-    text-align: center;
-    font-size: 3rem;
-    color: #BD36A8;
-    font-family: 'Gugi', cursive;
-    margin: 0;
-}
-
-#logoSec{
-    width: max-content;
-    margin: auto;
-    top: 0;
     right: 0;
-    left: 0;
-    position: absolute;
+    margin: auto;
 }
+
 
 #score{
     width: 20vw;
@@ -156,15 +142,15 @@
 
 }
 
-#panelBackground{
-    /*background-color: #E4B6DD;
+#panelBackground {
+ /*   background-color: #fcd8fc;
     border-radius: 15px;
-    width: 45vw;
-    height: 94vh;
+    width: 43vw;
+    height: 88vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    box-shadow: 13px 10px 5px 0px #9c9a9a;*/
+    align-items: end;
+    box-shadow: 5px 5px 5px 0px #9c9a9a;*/
 }
 
 #timer{
