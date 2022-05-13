@@ -247,7 +247,8 @@ $("#home").click(function (){
     $("#Map").css('display','none');
     $("#board").css('display','none');
 
-    setTimeout(playMusic,1000)
+    setTimeout(playMusic,1000);
+
 
 });
 

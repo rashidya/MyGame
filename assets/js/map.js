@@ -22,7 +22,8 @@ $("#level_1").click(function (){
     $(".cards>img").css('width','6vw');
 
 
-    setTimeout(playMusic,1000)
+    setTimeout(playMusic,1000);
+    setCards();
 
 });
 
@@ -42,7 +43,8 @@ $("#level_2").click(function (){
     $(".cards").css('height','12vh');
     $(".cards>img").css('width','4vw');
 
-    setTimeout(playMusic,1000)
+    setTimeout(playMusic,1000);
+    setCards();
 
 });
 
@@ -60,7 +62,8 @@ $("#level_3").click(function (){
     $(".cards").css('height','9vh');
     $(".cards>img").css('width','3vw');
 
-    setTimeout(playMusic,1000)
+    setTimeout(playMusic,1000);
+    setCards();
 
 });
 
@@ -77,3 +80,14 @@ $("#homeMap").click(function (){
     setTimeout(playMusic,1000)
 
 });
+
+function setCards(){
+    $(".cards").css('visibility','visible');
+    $(".cards").css('transform','rotateY(0deg)');
+    $(".cards").children('img:nth-child(1)').css('display', 'none');
+    $(".cards").children('img:nth-child(2)').css('display', 'block');
+
+    $("#timer>div").css('height','53.2vh');
+    clearInterval(timer);
+    firstClick=true;
+}
