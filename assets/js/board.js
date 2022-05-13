@@ -1,8 +1,4 @@
-var music = document.createElement('audio');
-music.setAttribute('src','assets/audio/backgroundMusic.mp3');
 
-var select = document.createElement('audio');
-select.setAttribute('src','assets/audio/select.wav');
 
 var victory = document.createElement('audio');
 victory.setAttribute('src','assets/audio/victory.wav');
@@ -70,6 +66,7 @@ $(".cards").click(function (){
                     music.pause();
                     victory.play();
                     victory.volume=0.3;
+                    music.play();
                     $("#result").css('display','block');
                     $("#panel").css('display','none');
                     $("#timerSection").css('display','none');
@@ -253,10 +250,10 @@ $("#home").click(function (){
 });
 
 $("#replay").click(function (){
-    music.play();
-    music.volume=0.3;
     select.play();
     select.volume=0.2;
+  
+
 
     $("#Main").css('display','block');
     $("#Map").css('display','none');

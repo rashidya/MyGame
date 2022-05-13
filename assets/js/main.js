@@ -1,5 +1,6 @@
 var music = document.createElement('audio');
 music.setAttribute('src','assets/audio/backgroundMusic.mp3');
+music.loop=true;
 
 
 var select = document.createElement('audio');

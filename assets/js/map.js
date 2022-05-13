@@ -1,9 +1,4 @@
-var music = document.createElement('audio');
-music.setAttribute('src','assets/audio/backgroundMusic.mp3');
 
-
-var select = document.createElement('audio');
-select.setAttribute('src','assets/audio/select.wav');
 
 $("#level_1").click(function (){
     music.play();
