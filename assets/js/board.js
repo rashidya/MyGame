@@ -1,7 +1,8 @@
-
-
 var victory = document.createElement('audio');
 victory.setAttribute('src','assets/audio/victory.wav');
+
+var gameOver = document.createElement('audio');
+gameOver.setAttribute('src','assets/audio/gameOver.wav');
 
 
 var selectedCard=null;
@@ -65,8 +66,9 @@ $(".cards").click(function (){
                 if (count===no_of_cards){
                     music.pause();
                     victory.play();
-                    victory.volume=0.3;
+                    victory.volume=0.8;
                     music.play();
+                    music.volume=0.05;
                     $("#result").css('display','block');
                     $("#panel").css('display','none');
                     $("#timerSection").css('display','none');
@@ -226,7 +228,15 @@ function time(){
         for (let i = 0; i < cards.length; i++) {
             var card=cards[i];
             if ($(card).css('visibility') =='visible'){
-                alert('Game Over');
+                music.pause();
+                gameOver.play();
+                gameOver.volume=0.8;
+                music.play();
+                music.volume=0.05;
+                $("#gameOver").css('display','block');
+                $("#panel").css('display','none');
+                $("#timerSection").css('display','none');
+                clearInterval(timer);
                 break;
             }
         }
@@ -264,17 +274,23 @@ $("#back").click(function (){
 });
 
 $("#replay").click(function (){
+
+replay();
+});
+
+$("#replayGameOver").click(function (){
+
+    replay();
+});
+
+function replay(){
     select.play();
     select.volume=0.2;
-
-
-
     $("#Main").css('display','block');
     $("#Map").css('display','none');
     $("#board").css('display','none');
 
     setTimeout(playMusic,1000)
-
-});
+}
 
 $(".cards").attr('type','button');

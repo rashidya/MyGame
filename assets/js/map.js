@@ -73,11 +73,13 @@ $("#cancel").click(function (){
 });
 
 function setBoard(){
+    count=0;
     $("#Main").css('display','none');
     $("#board").css('display','block');
     $("#result").css('display','none');
     $("#panel").css('display','flex');
     $("#timerSection").css('display','flex');
+    $("#timer>div").css('background-color','#dd58fa');
     $(".cards").css('visibility','visible');
     $(".cards").css('transform','rotateY(0deg)');
     $(".cards").children('img:nth-child(1)').css('display', 'none');
