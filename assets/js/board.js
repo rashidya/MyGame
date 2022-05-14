@@ -249,10 +249,24 @@ $("#home").click(function (){
 
 });
 
+$("#back").click(function (){
+    music.play();
+    music.volume=0.3;
+    select.play();
+    select.volume=0.2;
+
+    $("#Main").css('display','none');
+    $("#Map").css('display','block');
+    $("#board").css('display','none');
+
+    setTimeout(playMusic,1000)
+
+});
+
 $("#replay").click(function (){
     select.play();
     select.volume=0.2;
-  
+
 
 
     $("#Main").css('display','block');

@@ -32,5 +32,5 @@ $(window).on('load',function (){
 });
 
 function playMusic(){
-  /*  music.play();*/
+    music.play();
 }
